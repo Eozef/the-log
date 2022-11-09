@@ -1,3 +1,5 @@
+import Button from "./button";
+
 export default function Hero() {
   return (
     <section className="mt-16">
@@ -11,7 +13,7 @@ export default function Hero() {
         acquired to assist the company to success and expansion of
         opportunities.
       </p>
-      <button>Hire Me!</button>
+      <Button className="bg-blue-800 text-white px-8">Hire Me!</Button>
     </section>
   );
 }
