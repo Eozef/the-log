@@ -1,7 +1,7 @@
 export default function Hero() {
   return (
     <section className="mt-16">
-      <h1 className="text-7xl font-bold">Hi I'm Joseph</h1>
+      <h1 className="text-7xl font-bold">Hi I&apos;m Joseph</h1>
       <h3 className="text-4xl my-3">I am a Developer</h3>
       <p className="text-gray-700 mb-8">
         A dedicated and hard-working IT seeking the role of Software Developer,
