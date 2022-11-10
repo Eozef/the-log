@@ -47,7 +47,7 @@ export default function Header() {
 
   return (
     <header className="h-16 flex items-center justify-between">
-      <div className="flex gap-4 ">
+      <ul className="flex gap-4 ">
         {navigations.map((nav) => (
           // eslint-disable-next-line react/jsx-key
           <Link
@@ -57,7 +57,7 @@ export default function Header() {
             {nav.label}
           </Link>
         ))}
-      </div>
+      </ul>
       {renderThemeChanger()}
     </header>
   );
