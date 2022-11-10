@@ -1,16 +1,24 @@
 import { useTheme } from "next-themes";
 import Link from "next/link";
 import Button from "../components/button";
+import { useEffect, useState } from "react";
 
 export default function Header() {
+  const { systemTheme, theme, setTheme } = useTheme();
+  const [mounted, setMounted] = useState(false);
+
+  useEffect(() => {
+    setMounted(true);
+  }, []);
+
   const navigations = [
     { label: "Home", path: "/" },
     { label: "About", path: "./about" },
   ];
 
-  const { systemTheme, theme, setTheme } = useTheme();
-
   const renderThemeChanger = () => {
+    if (!mounted) return null;
+
     const currentTheme = theme === "system" ? systemTheme : theme;
     if (currentTheme === "light") {
       return (
