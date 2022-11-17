@@ -13,8 +13,8 @@ export default function Header() {
 
   const navigations = [
     { label: "Home", path: "/" },
-    { label: "About", path: "./about" },
-    { label: "Blog", path: "./blog" },
+    { label: "Blog", path: "../blog" },
+    { label: "About", path: "../about" },
   ];
 
   const renderThemeChanger = () => {

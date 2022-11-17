@@ -7,7 +7,7 @@ export default function Post({ frontmatter, content }) {
   const { title, author, category, date, bannerImage, tags } = frontmatter;
 
   return (
-    <main className="font-semibold mt-20 mr-10">
+    <main className=" prose font-semibold mt-20 mr-10">
       {/* <img src={bannerImage} /> */}
       <h1 className="text-3xl font-bold">{title}</h1>
       <div className="text-xs mt-5 text-gray-500">

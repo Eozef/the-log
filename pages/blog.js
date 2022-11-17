@@ -11,16 +11,17 @@ export default function Blog({ posts }) {
         //extract slug and frontmatter
         const { slug, frontmatter } = post;
         //extract frontmatter properties
-        const { title, author, category, date, bannerImage, tags } =
+        const { title, metaDesc, category, date, bannerImage, tags } =
           frontmatter;
 
         //JSX for individual blog listing
         return (
-          <article className="font-semibold mt-20 mr-10" key={title}>
+          <article className="mt-20 mr-10" key={title}>
             <Link href={`/posts/${slug}`}>
-              <h1 className="text-2xl font-bold">{title}</h1>
+              <h1 className="text-gray-800 text-3xl font-bold mt-20 mr-5">{title}</h1>
             </Link>
             <h3 className="text-xs mt-2 text-gray-500">{date}</h3>
+            <h3 className="mt-2 font-semibold text-gray-500">{metaDesc}</h3>
           </article>
         );
       })}
