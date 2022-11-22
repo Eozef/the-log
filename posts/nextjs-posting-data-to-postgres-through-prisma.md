@@ -1,9 +1,9 @@
 ---
-title: 'Next.js posting data to Postgres through Prisma'
-metaTitle: 'Next.js posting data to Postgres through Prisma'
-metaDesc: 'Posting data to Postgres using Prisma in Next.js'
+title: "Next.js posting data to Postgres through Prisma"
+metaTitle: "Next.js posting data to Postgres through Prisma"
+metaDesc: "Posting data to Postgres using Prisma in Next.js"
 socialImage: images/27-10-2021.jpg
-date: '2021-10-27'
+date: "2022-10-27"
 tags:
   - nextjs
   - prisma
@@ -83,7 +83,7 @@ We already have a `playlists` endpoint so let's leverage that one but modify it 
 Open the `pages/api/playlists.js` file and start by importing the Prisma requirements.
 
 ```js
-import { PrismaClient } from '@prisma/client';
+import { PrismaClient } from "@prisma/client";
 const prisma = new PrismaClient();
 ```
 
@@ -94,9 +94,9 @@ const handler = async (req, res) => {
   const {
     token: { accessToken, email },
   } = await getSession({ req });
-  if (req.method === 'POST') {
+  if (req.method === "POST") {
     // Do post stuff
-  } else if (req.method === 'GET') {
+  } else if (req.method === "GET") {
     const response = await getUsersPlaylists(accessToken);
     const { items } = await response.json();
     return res.status(200).json({ items });
@@ -108,7 +108,7 @@ const handler = async (req, res) => {
 As for the `POST` section, we want to extract the correct data from our post query and create a new object to send to our database.
 
 ```js
-if (req.method === 'POST') {
+if (req.method === "POST") {
   const { body } = req;
   const {
     name,
@@ -145,7 +145,7 @@ Inside the map function add a button with a click action like so:
   list.map((item) => (
     <div key={item.id}>
       <h1>{item.name}</h1>
-      <img src={item.images[0]?.url} width='100' />
+      <img src={item.images[0]?.url} width="100" />
       <br />
       <button onClick={() => saveToDatabase(item)}>Save in database</button>
     </div>
@@ -157,8 +157,8 @@ Now let's go ahead and make this `saveToDatabase` function.
 
 ```js
 const saveToDatabase = async (item) => {
-  const res = await fetch('api/playlists', {
-    method: 'POST',
+  const res = await fetch("api/playlists", {
+    method: "POST",
     body: JSON.stringify(item),
   });
   const data = await res.json();

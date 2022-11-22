@@ -1,13 +1,15 @@
 import fs from "fs";
 import matter from "gray-matter";
 import md from "markdown-it";
+import Blog from "../blog";
+import Link from "next/link";
 
 // The page for each post
 export default function Post({ frontmatter, content }) {
   const { title, author, category, date, bannerImage, tags } = frontmatter;
 
   return (
-    <main className=" prose font-semibold mt-20 mb-20">
+    <main className="font-semibold mt-20 mb-20">
       {/* <img src={bannerImage} /> */}
       <h1 className="text-4xl font-bold dark:text-gray-200">{title}</h1>
       <div className="text-xs mt-5 ">
@@ -16,7 +18,7 @@ export default function Post({ frontmatter, content }) {
         </h2>
       </div>
       <div
-        className=" dark:text-gray-300 mt-10 prose dark: prose-code:text-blue-500  prose-a:text-gray-500 prose-h2:text-gray-500  prose-h3:text-gray-500 prose-p: font-normal"
+        className="prose dark:text-gray-300 mt-10 prose dark: prose-code:text-blue-500  prose-a:text-gray-500 prose-h2:text-gray-500  prose-h3:text-gray-500 prose-p: font-normal"
         dangerouslySetInnerHTML={{ __html: md().render(content) }}
       />
     </main>

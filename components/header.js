@@ -12,9 +12,9 @@ export default function Header() {
   }, []);
 
   const navigations = [
-    { label: "Home", path: "/" },
-    { label: "Blog", path: "../blog" },
-    { label: "About", path: "../about" },
+    { label: "home", path: "/" },
+    { label: "log", path: "../blog" },
+    // { label: "About", path: "../about" },
   ];
 
   const renderThemeChanger = () => {
@@ -61,7 +61,7 @@ export default function Header() {
           // eslint-disable-next-line react/jsx-key
           <Link
             href={nav.path}
-            className="font-semibold  text-gray-800 hover:text-gray-500 dark:text-gray-300"
+            className="font-semibold  text-gray-800 hover:text-gray-500 dark:text-gray-300 dark:hover:text-gray-500"
           >
             {nav.label}
           </Link>

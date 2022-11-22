@@ -2,7 +2,7 @@ import Button from "./button";
 
 export default function Hero() {
   return (
-    <section className="mt-16">
+    <section className="mt-20">
       <h1 className="text-gray-800 text-7xl font-bold dark:text-gray-300">
         Hi I&apos;m <span className="dark:text-blue-800">Joseph</span>
       </h1>

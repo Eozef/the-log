@@ -1,9 +1,10 @@
 export default function Footer() {
   return (
-    <footer className="py-6 text-center text-gray-800 text-sm dark:text-gray-300">
-      <span className="text-gray-800 dark:text-gray-300 font-bold text-lg mr-2">
-        Joseph
-      </span>{" "}
+    <footer className="py-6 text-center text-gray-800 text-base font-bold dark:text-gray-300 ">
+      <span>
+        <a href="https://github.com/Eozef">github</a> ||
+        <a href="https://www.linkedin.com/in/jingyi-yg/"> linkedin </a>
+      </span>
       &copy; {new Date().getFullYear()} All Rights Reversed
     </footer>
   );
