@@ -12,8 +12,8 @@ export default function Header() {
   }, []);
 
   const navigations = [
-    { label: "home", path: "/" },
-    { label: "log", path: "../blog" },
+    { label: "🏠", path: "/" },
+    { label: "🖋️", path: "../blog" },
     // { label: "About", path: "../about" },
   ];
 
@@ -61,7 +61,7 @@ export default function Header() {
           // eslint-disable-next-line react/jsx-key
           <Link
             href={nav.path}
-            className="font-semibold  text-gray-800 hover:text-gray-500 dark:text-gray-300 dark:hover:text-gray-500"
+            className="font-thick  text-gray-800 hover:text-gray-500 dark:text-gray-300 dark:hover:text-gray-500"
           >
             {nav.label}
           </Link>
