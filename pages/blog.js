@@ -16,12 +16,18 @@ export default function Blog({ posts }) {
 
         //JSX for individual blog listing
         return (
-          <article className="mt-20 mr-10" key={title}>
+          <article className="mt-20 mb-20" key={title}>
             <Link href={`/posts/${slug}`}>
-              <h1 className="text-gray-800 text-3xl font-bold mt-20 mr-5">{title}</h1>
+              <h1 className="text-gray-800 text-4xl font-bold mt-20  dark:text-gray-200">
+                {title}
+              </h1>
             </Link>
-            <h3 className="text-xs mt-2 text-gray-500">{date}</h3>
-            <h3 className="mt-2 font-semibold text-gray-500">{metaDesc}</h3>
+            <h3 className=" text-gray-800 text-xs mt-2  dark:text-gray-300">
+              {date}
+            </h3>
+            <h3 className=" text-gray-800 mt-2 text-xl dark:text-gray-300">
+              {metaDesc}
+            </h3>
           </article>
         );
       })}

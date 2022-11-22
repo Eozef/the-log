@@ -7,19 +7,16 @@ export default function Post({ frontmatter, content }) {
   const { title, author, category, date, bannerImage, tags } = frontmatter;
 
   return (
-    <main className=" prose font-semibold mt-20 mr-10">
+    <main className=" prose font-semibold mt-20 mb-20">
       {/* <img src={bannerImage} /> */}
-      <h1 className="text-3xl font-bold">{title}</h1>
-      <div className="text-xs mt-5 text-gray-500">
-        <h2>
-          {author} || {date}
+      <h1 className="text-4xl font-bold dark:text-gray-200">{title}</h1>
+      <div className="text-xs mt-5 ">
+        <h2 className="text-xs  dark:text-gray-200">
+          {date} || {tags}
         </h2>
-        <h3 className="mt-5">
-          {category} || {tags.join()}
-        </h3>
       </div>
       <div
-        className="mt-10 text-gray-500"
+        className=" dark:text-gray-300 mt-10 prose dark: prose-code:text-blue-500  prose-a:text-gray-500 prose-h2:text-gray-500  prose-h3:text-gray-500 prose-p: font-normal"
         dangerouslySetInnerHTML={{ __html: md().render(content) }}
       />
     </main>
