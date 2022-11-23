@@ -1,9 +1,9 @@
 ---
-title: 'Next.js page options and how they work'
-metaTitle: 'Next.js page options and how they work'
-metaDesc: 'How to use pages in Next.js exploring the options'
+title: "Next.js page options and how they work"
+metaTitle: "Next.js page options and how they work"
+metaDesc: "How to use pages in Next.js exploring the options"
 socialImage: images/22-09-2021.jpg
-date: '2022-11-22'
+date: "2022-11-22"
 tags:
   - nextjs
 ---
@@ -26,21 +26,21 @@ Let's create a simple static contact page for our [Next.js tailwind starter](htt
 Create a file called `contact.js` in your `pages` folder.
 
 ```js
-import Head from 'next/head';
+import Head from "next/head";
 
 export default function Contact() {
   return (
-    <div className='flex items-center justify-center min-h-screen'>
+    <div className="flex items-center justify-center min-h-screen">
       <Head>
         <title>Contact page</title>
-        <meta name='description' content='Contact us' />
-        <link rel='icon' href='/favicon.ico' />
+        <meta name="description" content="Contact us" />
+        <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <div className='max-w-xs my-2 overflow-hidden rounded shadow-lg'>
-        <div className='px-6 py-4'>
-          <div className='mb-2 text-xl font-bold'>Contact us</div>
-          <p className='text-base text-grey-darker'>
+      <div className="max-w-xs my-2 overflow-hidden rounded shadow-lg">
+        <div className="px-6 py-4">
+          <div className="mb-2 text-xl font-bold">Contact us</div>
+          <p className="text-base text-grey-darker">
             This will be the place to contact us later on.
           </p>
         </div>
@@ -99,7 +99,7 @@ These props are passed to our primary function (Shows).
 So let's see how we can fetch data inside the `getStaticProps` function.
 
 ```js
-const res = await fetch('https://api.jikan.moe/v3/top/anime/1');
+const res = await fetch("https://api.jikan.moe/v3/top/anime/1");
 const shows = await res.json();
 ```
 
@@ -111,19 +111,19 @@ Then as for our HTML, we can now use this `shows` object since we passed it to o
 ```js
 function Shows({ shows }) {
   return (
-    <div className='grid min-h-screen grid-cols-5 gap-4 p-5'>
+    <div className="grid min-h-screen grid-cols-5 gap-4 p-5">
       {shows.top.map((show) => (
         <div
           key={show.id}
-          className='max-w-xs my-2 overflow-hidden rounded shadow-lg '
+          className="max-w-xs my-2 overflow-hidden rounded shadow-lg "
         >
           <img
-            className='flex-1 object-cover w-full h-80'
+            className="flex-1 object-cover w-full h-80"
             src={show.image_url}
             alt={show.title}
           />
-          <div className='px-6 py-4'>
-            <div className='mb-2 text-xl font-bold'>{show.title}</div>
+          <div className="px-6 py-4">
+            <div className="mb-2 text-xl font-bold">{show.title}</div>
           </div>
         </div>
       ))}
@@ -158,7 +158,7 @@ function Show(show) {
 }
 
 export async function getStaticPaths() {
-  const res = await fetch('https://api.jikan.moe/v3/top/anime/1');
+  const res = await fetch("https://api.jikan.moe/v3/top/anime/1");
   const shows = await res.json();
   const paths = shows.top.map((show) => {
     return {
@@ -195,4 +195,4 @@ I hope you found this helpful article. You can also find the complete code on [G
 
 ### Thank you for reading, and let's connect!
 
-Thank you for reading my blog. Feel free to subscribe to my email newsletter and connect on [Facebook](https://www.facebook.com/DailyDevTipsBlog) or [Twitter](https://twitter.com/DailyDevTips1)
+Thank you for reading my blog. Feel free to subscribe to my email newsletter and connect on [Twitter](https://twitter.com/eozef_)

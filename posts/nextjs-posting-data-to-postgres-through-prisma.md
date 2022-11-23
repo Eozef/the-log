@@ -176,4 +176,4 @@ You can also find the complete code on [GitHub](https://github.com/rebelchris/ne
 
 ### Thank you for reading, and let's connect!
 
-Thank you for reading my blog. Feel free to subscribe to my email newsletter and connect on [Facebook](https://www.facebook.com/DailyDevTipsBlog) or [Twitter](https://twitter.com/DailyDevTips1)
+Thank you for reading my blog. Feel free to subscribe to my email newsletter and connect on [Twitter](https://twitter.com/eozef_)

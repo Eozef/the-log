@@ -87,4 +87,4 @@ You can find this complete code example on [GitHub](https://github.com/rebelchri
 
 ### Thank you for reading, and let's connect!
 
-Thank you for reading my blog. Feel free to subscribe to my email newsletter and connect on [Facebook](https://www.facebook.com/DailyDevTipsBlog) or [Twitter](https://twitter.com/DailyDevTips1)
+Thank you for reading my blog. Feel free to subscribe to my email newsletter and connect on [Twitter](https://twitter.com/eozef_)
