@@ -11,7 +11,7 @@ export default function Hero() {
         I am a Developer
       </h3>
       <ul className="text-gray-800 mb-8 dark:text-gray-300 ">
-        <li>On the Internet since 2005, which is my actual "home town"</li>
+        <li>On the Internet since 2005, which is my actual <q>home town</q></li>
         <li>I post stuff about coding and write code</li>
         <li>Live in Sydney</li>
       </ul>
