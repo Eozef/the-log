@@ -1,12 +1,11 @@
 import fs from "fs";
 import matter from "gray-matter";
 import md from "markdown-it";
-import Blog from "../blog";
 import Link from "next/link";
 
 // The page for each post
 export default function Post({ frontmatter, content }) {
-  const { title, author, category, date, bannerImage, tags } = frontmatter;
+  const { title, date, tags } = frontmatter;
 
   return (
     <main className="font-semibold mt-20 mb-20">
@@ -18,9 +17,13 @@ export default function Post({ frontmatter, content }) {
         </h2>
       </div>
       <div
-        className="prose dark:text-gray-300 mt-10 prose dark: prose-code:text-blue-500  prose-a:text-gray-500 prose-h2:text-gray-500  prose-h3:text-gray-500 prose-p: font-normal"
+        className="prose dark:text-gray-300 mt-10 dark: prose-code:text-blue-500  prose-a:text-gray-500 prose-h2:text-gray-500  prose-h3:text-gray-500 prose-p: font-normal"
         dangerouslySetInnerHTML={{ __html: md().render(content) }}
       />
+      
+      <div className="text-right text-2xl">
+        <Link href={"../blog"}>🔙</Link>
+      </div>
     </main>
   );
 }

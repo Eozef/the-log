@@ -1,9 +1,9 @@
 ---
-title: 'Next.js toggle between grid and list view'
-metaTitle: 'Next.js toggle between grid and list view'
-metaDesc: 'How to toggle between a grid and list in Next.js'
+title: "Next.js toggle between grid and list view"
+metaTitle: "Next.js toggle between grid and list view"
+metaDesc: "How to toggle between a grid and list in Next.js"
 socialImage: images/04-10-2021.jpg
-date: '2021-10-04'
+date: "2021-10-04"
 tags:
   - nextjs
 ---
@@ -12,11 +12,6 @@ Today we'll be building a simple yet super effective toggle function.
 It will give us the option to toggle between the list and grid view.
 
 The result will work like the video below.
-
-<video autoplay loop muted playsinline>
-  <source src="https://res.cloudinary.com/daily-dev-tips/video/upload/q_auto/gridlist_nkhwm4.webm" type="video/webm" />
-  <source src="https://res.cloudinary.com/daily-dev-tips/video/upload/q_auto/gridlist_xdrt8a.mp4" type="video/mp4" />
-</video>
 
 <!-- ![Next.js toggle between grid and list view](https://cdn.hashnode.com/res/hashnode/image/upload/v1632638811731/wTlld_S4d.gif) -->
 
@@ -29,7 +24,7 @@ Since Next.js is React, we can use all the fantastic React state management tool
 Open up your `pages/index.js` file and import the `useState` from React.
 
 ```js
-import { useState } from 'react';
+import { useState } from "react";
 ```
 
 Then inside our page, we can define the state and its default value.
@@ -46,12 +41,12 @@ The `setToggleViewMode` is the function we can call to change the value of this 
 Let's go ahead and add a button that, on click, can change our variable.
 
 ```jsx
-<div className='flex justify-end p-5'>
+<div className="flex justify-end p-5">
   <button
-    className='px-4 py-2 font-bold text-white bg-blue-500 rounded-full hover:bg-blue-700'
+    className="px-4 py-2 font-bold text-white bg-blue-500 rounded-full hover:bg-blue-700"
     onClick={() => setToggleViewMode(!toggleViewMode)}
   >
-    {toggleViewMode ? 'grid' : 'list'}
+    {toggleViewMode ? "grid" : "list"}
   </button>
 </div>
 ```

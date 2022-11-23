@@ -61,7 +61,7 @@ export default function Header() {
           // eslint-disable-next-line react/jsx-key
           <Link
             href={nav.path}
-            className="font-thick  text-gray-800 hover:text-gray-500 dark:text-gray-300 dark:hover:text-gray-500"
+            className="text-2xl font-thick  text-gray-800 hover:text-gray-500 dark:text-gray-300 dark:hover:text-gray-500"
           >
             {nav.label}
           </Link>

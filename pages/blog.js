@@ -1,6 +1,5 @@
 import fs from "fs";
 import matter from "gray-matter";
-import Image from "next/image";
 import Link from "next/link";
 
 // The Blog Page Content
@@ -11,19 +10,19 @@ export default function Blog({ posts }) {
         //extract slug and frontmatter
         const { slug, frontmatter } = post;
         //extract frontmatter properties
-        const { title, metaDesc, category, date, bannerImage, tags } =
+        const { title, metaDesc, date, tags } =
           frontmatter;
 
         //JSX for individual blog listing
         return (
           <article className="mt-20 mb-20" key={title}>
             <Link href={`/posts/${slug}`}>
-              <h1 className="text-gray-800 text-4xl font-bold mt-20  dark:text-gray-200">
+              <h1 className="text-gray-800 text-3xl font-bold dark:text-gray-200">
                 {title}
               </h1>
             </Link>
             <h3 className=" text-gray-800 text-xs mt-2  dark:text-gray-300">
-              {date}
+              {date} || {tags}
             </h3>
             <h3 className=" text-gray-800 mt-2 text-xl dark:text-gray-300">
               {metaDesc}
