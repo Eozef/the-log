@@ -1,5 +1,6 @@
 ## This is a Markdown powered Next.js blog!
-# Dark mode
+* toggled dark mode which syncing themes based on the system theme setting or a toggle button
+* Tailwind typography 
 
 [DEMO](https://the-l0u4vtp5r-eozef.vercel.app/) 
 
